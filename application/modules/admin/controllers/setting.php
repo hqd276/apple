@@ -72,8 +72,8 @@ class Setting extends MX_Controller{
 
 				$value['image'] = $dataC['image'];
 				if (!empty ($_FILES['image'])) {
-					$this->load->model(array('Mgallery'));
-					$image_data = $this->Mgallery->do_upload("/settings/");
+					$this->load->model(array('mgallery'));
+					$image_data = $this->mgallery->do_upload("/settings/");
 					if ($image_data) {
 						$value['image'] = $image_data["file_name"];
 					}

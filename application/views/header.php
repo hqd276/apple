@@ -15,12 +15,17 @@
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav">
-		        <li><a href="<?php echo base_url().'news/list/0';?>">Store</a></li>
-		        <li><a href="<?php echo base_url().'news/list/1';?>">Mac</a></li>
-		        <li><a href="<?php echo base_url().'news/list/2';?>">Iphone</a></li>
-		        <li><a href="<?php echo base_url().'contact';?>">Contact</a></li>
-		      </ul>
+		      	<ul class="nav navbar-nav">
+			        <li><a href="<?php echo base_url().'news/list/0';?>">Tour</a></li>
+			        <li><a href="<?php echo base_url().'news/list/1';?>">Art</a></li>
+			        <li><a href="<?php echo base_url().'news/list/2';?>">Edu</a></li>
+			        <li><a href="<?php echo base_url().'contact';?>">Support</a></li>
+			   
+		      	</ul>
+		      	<div class="f-search pull-right">
+		        	<input type="text" class="form-control t-search" name="txtsearch">
+		        	<i class="fa fa-search"></i>
+		        </div>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>

@@ -8,7 +8,7 @@
 		</p>
 	</div>
 	<form class="form-horizontal  col-sm-8" role="form" method="post" action="<?php echo base_url();?>contact">
-		<h2 class="text-uppercase">Contact form</h2>
+		<h2 class="text-uppercase">Support form</h2>
 		<div class="form-group">
 			<div>
 				<span class="success">

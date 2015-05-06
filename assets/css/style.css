@@ -10,6 +10,23 @@ body {
 	border: none;
 	background: transparent;
 	margin-bottom: 0;
+
+}
+.f-search {
+	width: 150px;
+	position: relative;
+	/*opacity: 0.8;*/
+	margin-top: 8px;
+	
+}
+.f-search .t-search {
+	opacity: 0.9;
+}
+.f-search i{
+	position: absolute;
+	top:10px;
+	right: 8px;
+	color: #999;
 }
 .header .navbar-default .navbar-nav>li>a,.header .navbar-default .navbar-brand {
 	color: #fff;
@@ -17,6 +34,10 @@ body {
 .header .navbar-default .navbar-nav>li>a:hover {
 	text-shadow: 1px 1px 2px; #ccc;
 	background: transparent;
+}
+
+.middle {
+	min-height: 500px;
 }
 #carousel-home>.carousel-inner>.item,#carousel-home>.carousel-inner>.item {
 	width: 100%;

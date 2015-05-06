@@ -34,22 +34,28 @@
 	<div class="clearfix"></div>
 	<div class="product">
 		<div class="col-md-4 item box">
-			<img src="<?php echo base_url();?>assets/images/1.jpg">
-			<span class="caption simple-caption">  
-	        <p class="text-uppercase">Store</p>  
-	        </span>  
+			<a href="<?php echo base_url().'news/list/0'?>">
+				<img src="<?php echo base_url().'uploads/settings/'.$setting['tour']['data']->image;?>">
+				<span class="caption simple-caption">  
+		        <p class="text-uppercase"><?php echo $setting['tour']['data']->name?></p>  
+		        </span>
+	        </a>
 		</div>
 		<div class="col-md-4 item box">
-			<img id="image-6" src="<?php echo base_url();?>assets/images/2.jpg">
-			<span class="caption scale-caption">  
-	        <p class="text-uppercase">Mac</p>  
-	        </span> 
+			<a href="<?php echo base_url().'news/list/1'?>">
+				<img id="image-6" src="<?php echo base_url().'uploads/settings/'.$setting['art']['data']->image;?>">
+				<span class="caption scale-caption">  
+		        <p class="text-uppercase"><?php echo $setting['art']['data']->name?></p>  
+		        </span> 
+	        </a>
 		</div>
 		<div class="col-md-4 item box">
-			<img src="<?php echo base_url();?>assets/images/3.jpg">
-			<span class="caption simple-caption">  
-	        <p class="text-uppercase">Iphone</p>  
-	        </span> 
+			<a href="<?php echo base_url().'news/list/2'?>">
+				<img src="<?php echo base_url().'uploads/settings/'.$setting['edu']['data']->image;?>">
+				<span class="caption simple-caption">  
+		        <p class="text-uppercase"><?php echo $setting['edu']['data']->name?></p>  
+		        </span> 
+	        </a>
 		</div>
 		<!-- <div class="col-sm-4 item box" style="background-image:url('images/1.jpg')"></div>
 		<div class="col-sm-4 item box" style="background-image:url('images/2.jpg')"></div>

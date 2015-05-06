@@ -6,7 +6,7 @@
 		<thead>
 			<th>Id</th>
 			<th>Email</th>
-			<th>Parent</th>
+			<th>Image</th>
 			<th>Status</th>
 			<th>Action</th>
 		</thead>
@@ -16,7 +16,13 @@
 			<tr>
 				<td><?php echo $item["id"]?></td>
 				<td><?php echo $item["name"]?></td>
-				<td><?php echo ($item["parent"]==1)?'Đã thực hiện':'Đang thực hiện'?></td>
+				<td>
+				<?php 
+				if ($item['image']!='') {
+					echo "<img class='img_item' src='".base_url("uploads/categories/thumbs/".$item['image'])."'/>";
+				}
+				?>
+				</td>
 				<td><?php echo $item["status"]?></td>
 				<td>
 					<a href="#" onclick="confirmClick('<?php echo base_url('/admin/category/delete/'.$type.'/'.$item["id"])?>')"  class="btn btn-default"> Delete </a>

@@ -78,8 +78,8 @@ class Gallery extends MX_Controller{
 			$data['b_Check']= false;
 
 			if (!empty ($_FILES['image'])) {
-				$this->load->model(array('Mgallery'));
-				$image_data = $this->Mgallery->do_upload("/gallery/");
+				$this->load->model(array('mgallery'));
+				$image_data = $this->mgallery->do_upload("/gallery/");
 				if ($image_data) {
 					$dataC['image'] = $image_data["file_name"];
 					if ($this->modelgallery->insertImage($dataC)){
@@ -122,8 +122,8 @@ class Gallery extends MX_Controller{
 			$data['b_Check']= false;
 
 			if (!empty ($_FILES['image'])) {
-				$this->load->model(array('Mgallery'));
-				$image_data = $this->Mgallery->do_upload("/gallery/");
+				$this->load->model(array('mgallery'));
+				$image_data = $this->mgallery->do_upload("/gallery/");
 				if ($image_data) {
 					$dataC['image'] = $image_data["file_name"];
 				}

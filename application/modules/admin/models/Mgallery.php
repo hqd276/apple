@@ -1,5 +1,6 @@
-<?php
-class Mgallery extends CI_Model{
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
+
+class mgallery extends CI_Model{
     protected $_gallery_path = "";
     protected $_gallery_url = "";
     public function __construct(){
@@ -16,7 +17,7 @@ class Mgallery extends CI_Model{
         $this->_gallery_path.=$type;
 
         $config = array('upload_path'   => $this->_gallery_path,
-                        'allowed_types' => 'gif|jpg|png',
+                        'allowed_types' => 'gif|jpg|png|jpeg',
                         'max_size'      => '2000');
 
         $this->load->library("upload",$config);

@@ -28,15 +28,16 @@ class News extends MX_Controller {
 		$data = array();
 		switch ($type) {
 			case 0:
-				$data['title'] = "News & Events";
-				$data['page'] = "news";
+				$data['title'] = "Tour";
+				$data['page'] = "tour";
 				break;
 			case 1:
-				$data['title'] = "Themes";
+				$data['title'] = "Art";
+				$data['page'] = "art";
 				break;
 			case 2:
-				$data['title'] = "Tours";
-				$data['page'] = "tour";
+				$data['title'] = "Edu";
+				$data['page'] = "edu";
 				break;
 			// case 3:
 			// 	$data['title'] = "Blog";
@@ -48,17 +49,24 @@ class News extends MX_Controller {
 				break;
 		}
 
+		$categories = $this->modelcategory->getCategories(array('type'=>$type));
+		$data['categories'] = $categories;
+
 		if ($cat>0){
 			$category = $this->modelcategory->getCategoryById($cat);
 			$data['cat'] = $category;
 			$list_news = $this->modelnews->getNews(array('category_id'=>$cat),' LIMIT 0,5');
+			$data['list_news'] = $list_news;
+			$this->template->build('news-list',$data);
 		}else{
 			$data['cat'] = array('type'=>$type,'id'=>0,'name'=>'');
 			$list_news = $this->modelnews->getNews(array('type'=>$type),' LIMIT 0,5');
+			$data['list_news'] = $list_news;
+			$this->template->build('news',$data);
 		}
 
-		$data['list_news'] = $list_news;
-		$this->template->build('news',$data);
+		
+		
 	}
 	public function detail($id=0) {
 		if ($id<=0) 

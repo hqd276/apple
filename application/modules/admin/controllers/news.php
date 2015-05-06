@@ -116,8 +116,8 @@ class News extends MX_Controller{
 				$dataC['type'] = $type; 
 
 				if (!empty ($_FILES['image'])) {
-					$this->load->model(array('Mgallery'));
-					$image_data = $this->Mgallery->do_upload("/news/");
+					$this->load->model(array('mgallery'));
+					$image_data = $this->mgallery->do_upload("/news/");
 					if ($image_data) {
 						$dataC['image'] = $image_data["file_name"];
 					}
@@ -189,8 +189,8 @@ class News extends MX_Controller{
 				$dataC['type'] = $type; 
 
 				if (!empty ($_FILES['image'])) {
-					$this->load->model(array('Mgallery'));
-					$image_data = $this->Mgallery->do_upload("/news/");
+					$this->load->model(array('mgallery'));
+					$image_data = $this->mgallery->do_upload("/news/");
 					if ($image_data) {
 						$dataC['image'] = $image_data["file_name"];
 					}
