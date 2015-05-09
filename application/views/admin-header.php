@@ -48,10 +48,10 @@
 	              	</li>
 	          	</ul>
 	        </li>
-	        <!-- <li>
+	        <li>
 	        	<a href="<?php echo base_url();?>admin/member">Member</a>
 	        </li>
- -->	        <li>
+	        <li>
 	        	<a href="<?php echo base_url();?>admin/banner">Slide Show</a>
 	        </li>
 	        <!-- <li class="dropdown">

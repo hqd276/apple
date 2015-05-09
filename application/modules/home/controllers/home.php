@@ -44,7 +44,7 @@ class Home extends MX_Controller{
 		$data['banners'] = $banners;
 
 		$this->load->model(array('admin/modelmember'));
-		$list_member = $this->modelmember->getMembers(null,"LIMIT 3");
+		$list_member = $this->modelmember->getMembers(null,null);
 		$data['list_member'] = $list_member;
 
 		$this->template->build('home',$data);

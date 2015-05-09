@@ -1,14 +1,19 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/news.css">
-<div class="about-home container">
-	<!-- <div class="news-categories">
-		<ul class="list-inline">
-			<?php foreach ($categories as $k => $v) {?>
-			<li><a href="<?php echo base_url().'news/list/'.$v['type'].'/'.$v['id']?>"><?php echo $v['name']?></a></li>
-			<?php }?>
-		</ul>
-	</div> -->
+<div class="news-categories">
+	<ul class="list-inline">
+		<?php foreach ($categories as $k => $v) {?>
+		<li>
+			<a class="text-center" href="<?php echo base_url().'news/list/'.$v['type'].'/'.$v['id']?>">
+				<img src="<?php echo base_url().'uploads/categories/'.$v['image'];?>">
+				<p><?php echo $v['name']?></p>
+			</a>
+		</li>
+		<?php }?>
+	</ul>
+</div>
+<div class="news-list ">
 	<div class="product">
-		<div class="col-md-12 item box">
+		<div class="col-md-12 item box big">
 			<a href="<?php echo base_url().'news/list/'.$categories[0]['type'].'/'.$categories[0]['id']?>">
 				<img src="<?php echo base_url().'uploads/categories/'.$categories[0]['image'];?>">
 				<span class="caption simple-caption">  
@@ -40,7 +45,7 @@
 		        </span>
 	        </a>
 		</div>
-		<div class="col-md-12 item box">
+		<div class="col-md-12 item box big">
 			<a href="<?php echo base_url().'news/list/'.$categories[4]['type'].'/'.$categories[4]['id']?>">
 				<img src="<?php echo base_url().'uploads/categories/'.$categories[4]['image'];?>">
 				<span class="caption simple-caption">  
