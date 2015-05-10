@@ -197,6 +197,7 @@
 }
 .news-list h2{
   font-weight: bold;
+  margin: 0;
 }
 .news-list .about-image{
   max-width: 100%;
@@ -208,7 +209,7 @@
 .news-list .product .item{
   height:150px;
   background-size: cover;
-  margin: 2px 0;
+  /*margin: 2px 0;*/
 }
 @media (min-width: 992px) {
   .news-list .product .item.big{

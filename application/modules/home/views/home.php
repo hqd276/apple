@@ -15,7 +15,7 @@
 		  	<?php foreach ($banners as $key => $value){?>
 		    <div class="item <?php echo ($key==0)?"active":"" ?>" style="background:url(<?php echo base_url("uploads/banner/".$value['image']); ?>) no-repeat">
 		    	<div class="carousel-caption">
-		        	<?php echo $value['title']; ?>
+		        	<a href="<?php echo $value['link']; ?>"><?php echo $value['title']; ?></a> 
 		      	</div>
 		    </div>
 		   	<?php } ?>
@@ -63,13 +63,5 @@
 		<div class="col-sm-4 item box" style="background-image:url('images/2.jpg')"></div>
 		<div class="col-sm-4 item box" style="background-image:url('images/3.jpg')"></div> -->
 	</div>
-	<div class="partner">
-		<marquee>
-			<?php foreach ($list_member as $key => $value) {?>
-				<a target="_blank" href="<?php echo $value['description']; ?>" data-toggle="tooltip" data-placement="top" title="<?php echo $value['name']; ?>">
-					<img src="<?php echo base_url().'uploads/member/'.$value['image'] ?>">
-				</a>
-			<?php } ?>
-		</marquee>
-	</div>
+	
 </div>

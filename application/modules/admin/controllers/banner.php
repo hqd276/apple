@@ -52,6 +52,7 @@ class Banner extends MX_Controller{
 		$dataC = array(
 						// 'position' =>'',
 						'title' =>'',
+						'link' =>'',
 						'image' =>'',
 						'order' =>'',
 						'status' =>'');
@@ -59,6 +60,7 @@ class Banner extends MX_Controller{
 		if ($this->input->post('submit') == "ok") {
 			$dataC['title'] = $this->input->post('title'); 
 			$dataC['order'] = $this->input->post('order'); 
+			$dataC['link'] = $this->input->post('link'); 
 			// $dataC['position'] = $this->input->post('position'); 
 
 			if ($this->input->post('status'))
@@ -98,6 +100,7 @@ class Banner extends MX_Controller{
 		if ($this->input->post('submit') == "ok") {
 			$dataC['title'] = $this->input->post('title'); 
 			$dataC['order'] = $this->input->post('order'); 
+			$dataC['link'] = $this->input->post('link'); 
 			// $dataC['position'] = $this->input->post('position'); 
 
 			if ($this->input->post('status'))

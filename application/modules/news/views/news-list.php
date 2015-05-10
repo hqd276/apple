@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/news.css">
-<div class="container" style="min-height:400px;background:url('<?php echo base_url().'uploads/categories/'.$cat['image'];?>') no-repeat;background-size:cover;">
+<div class="news-list" style="min-height:400px;background:url('<?php echo base_url().'uploads/categories/'.$cat['image'];?>') no-repeat;background-size:cover;">
 	<h2 class="text-uppercase"><?php echo $cat['name']?></h2>
 	<hr>
 
