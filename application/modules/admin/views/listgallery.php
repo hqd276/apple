@@ -6,7 +6,6 @@
 		<thead>
 			<th>Id</th>
 			<th>Title</th>
-			<th>Category</th>
 			<th>Image</th>
 			<th>Status</th>
 			<th>Action</th>
@@ -17,7 +16,6 @@
 			<tr>
 				<td><?php echo $item["id"]?></td>
 				<td><?php echo $item["title"]?></td>
-				<td><?php echo $item["category"]?></td>
 				<td><?php 
 				if ($item['image']!='') {
 					echo "<img class='img_item' style='height:150px;' src='".base_url("uploads/gallery/".$item['image'])."'/>";

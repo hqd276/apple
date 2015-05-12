@@ -1,6 +1,8 @@
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/footer.css">
+
 <div class="footer">
 	
-	<div class="container">
+	<!-- <div class="container">
 		<div class="col-md-4">
 			<h4 class="text-uppercase">Tours</h4>
 			<ul class="list-unstyled">
@@ -31,7 +33,7 @@
 		      	<?php }?>
 			</ul>
 		</div>
-	</div>
+	</div> -->
 	<div class="partner">
 		<marquee>
 			<?php foreach ($list_member as $key => $value) {?>
@@ -45,7 +47,7 @@
 		<h5 class="pull-left">&copy; - Copyright by HD</h5>
 
 		<ul class="nav navbar-nav pull-right">
-			<li><a href="<?php echo base_url().'contact';?>"><?php echo $setting['aboutus']['data']->description?></a></li>
+			<li><a href="<?php echo base_url().'contact';?>"><?php echo $setting['about']['data']->description?></a></li>
 	        <li><a href="<?php echo base_url().'news/list/0';?>"><?php echo $setting['tour']['data']->description?></a></li>
 	        <li><a href="<?php echo base_url().'news/list/1';?>"><?php echo $setting['art']['data']->description?></a></li>
 	        <li><a href="<?php echo base_url().'news/list/2';?>"><?php echo $setting['edu']['data']->description?></a></li>
