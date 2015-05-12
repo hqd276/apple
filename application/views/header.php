@@ -21,7 +21,8 @@
 		      	<ul class="nav navbar-nav">
 			        <li><a href="<?php echo base_url().'news/list/0';?>"><?php echo $setting['tour']['data']->description?></a></li>
 			        <li><a href="<?php echo base_url().'news/list/1';?>"><?php echo $setting['art']['data']->description?></a></li>
-			        <li><a href="<?php echo base_url().'news/list/2';?>"><?php echo $setting['edu']['data']->description?></a></li>	   
+			        <li><a href="<?php echo base_url().'news/list/2';?>"><?php echo $setting['edu']['data']->description?></a></li>	
+			        <li><a href="<?php echo base_url().'gallery';?>"><?php echo $setting['gallery']['data']->description?></a></li>	   
 		      	</ul>
 		      	<div class="f-search pull-right">
 		        	<input type="text" class="form-control t-search" name="txtsearch">

@@ -1,5 +1,7 @@
 .thumbnail  {
 	overflow: hidden;
+	height: 150px;
+	padding: 0;
 }
 .thumbnail img  {
 	height:150px; 

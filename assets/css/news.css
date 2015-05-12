@@ -50,14 +50,14 @@
 	color: #d9bb4b;
 }
 .news-form .item h4 {
-	color: #5ecdd4;
+	color: #181818;
 }
 .news-form .item h4:hover {
-	color: #d9bb4b;
+	color: #888888;
 	cursor: pointer;
 }
 .news-form .item p {
-	color: #787878;
+	color: #303030;
 }
 
 .news-form .item .more {
@@ -68,8 +68,9 @@
 	background-repeat:repeat-x;
 }
 
-.news-detail .col-md-12 {
-	margin: 20px 0;
+.news-detail .img-responsive {
+  width: 80%;
+  margin: auto;
 }
 .news-detail .tab-content img {
   max-width: 100%;
@@ -194,9 +195,11 @@
 .news-list {
   padding-top: 180px;
 }
-.news-list h2{
+.news-list .title{
   font-weight: bold;
-  margin: 0;
+  font-size: 28px;
+  padding-top: 20px;
+  display: block;
 }
 .news-list .about-image{
   max-width: 100%;
@@ -208,7 +211,6 @@
 .news-list .product .item{
   height:150px;
   background-size: cover;
-  /*margin: 2px 0;*/
 }
 @media (min-width: 992px) {
   .news-list .product .item.big{
@@ -217,4 +219,11 @@
   .news-list {
     padding-top: 0px;
   }
+}
+
+.news-list .news-form .item{
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+  border-radius: 5px;
 }

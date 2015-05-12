@@ -1,10 +1,31 @@
 .footer {
+	padding: 20px 0 0;
 	background-color: #292929;
 	color: #fff;
+}
+.footer h5 {
+	line-height: 50px;
+	margin: 0;
+}
+.footer a {
+	color: #fff;
+}
+.footer a:hover {
+	text-decoration: none;
+	color: #ccc;
+}
+.footer .nav > li > a:hover,
+.footer .nav > li > a:focus {
+	background-color: #292929;
+}
+.partner {
+	padding: 10px;
+	margin: 10px auto;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
 	overflow: hidden;
-	padding: 30px;
 }
-.footer img {
-	width: 70px;
+.partner img{
+	padding-left: 10px;
+	height: 30px;
 }
-
