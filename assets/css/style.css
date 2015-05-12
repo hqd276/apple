@@ -42,7 +42,7 @@ body {
 }
 #carousel-home>.carousel-inner>.item,#carousel-home>.carousel-inner>.item {
 	width: 100%;
-	height: 330px;
+	height: 420px;
 	background-size: cover !important;
 }
 .carousel-caption {

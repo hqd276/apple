@@ -45,7 +45,7 @@
 		<h5 class="pull-left">&copy; - Copyright by HD</h5>
 
 		<ul class="nav navbar-nav pull-right">
-			<li><a href="<?php echo base_url().'contact';?>"><?php echo $setting['aboutus']['data']->description?></a></li>
+			<li><a href="<?php echo base_url().'about';?>"><?php echo $setting['about']['data']->description?></a></li>
 	        <li><a href="<?php echo base_url().'news/list/0';?>"><?php echo $setting['tour']['data']->description?></a></li>
 	        <li><a href="<?php echo base_url().'news/list/1';?>"><?php echo $setting['art']['data']->description?></a></li>
 	        <li><a href="<?php echo base_url().'news/list/2';?>"><?php echo $setting['edu']['data']->description?></a></li>

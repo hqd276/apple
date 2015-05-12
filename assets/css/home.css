@@ -1,6 +1,5 @@
 .about-home {
-	margin-top: 10px; 
-	margin-bottom: 10px;
+
 }
 .about-home h2{
 	font-weight: bold;
@@ -13,6 +12,6 @@
 	overflow: hidden;
 }
 .about-home .product .item{
-	height:150px;
+	height:200px;
 	background-size: cover;
 }

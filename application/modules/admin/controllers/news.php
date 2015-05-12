@@ -64,6 +64,7 @@ class News extends MX_Controller{
 
 		$this->load->model(array('modelcategory'));
 		$category = $this->modelcategory->getCategories(array("type"=>$type));
+		
 		// $category = add_array_key("id",$category);
 
 		$dataC = array('title' =>'',
