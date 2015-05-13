@@ -13,6 +13,7 @@ class Contact extends MX_Controller {
 
 		$data = Modules::run('header','home');
 		$this->template->set_partial('header','header',$data );
+		$data['is_news_page'] = false;
 		$this->template->set_partial('footer','footer',$data);
 	}
 	

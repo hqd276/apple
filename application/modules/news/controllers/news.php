@@ -17,7 +17,7 @@ class News extends MX_Controller {
 
 		$data = Modules::run('header','home');
 		$this->template->set_partial('header','header',$data);
-
+		$data['is_news_page'] = true;
 		$this->template->set_partial('footer','footer',$data);
 	}
 	
@@ -48,6 +48,7 @@ class News extends MX_Controller {
 				# code...
 				break;
 		}
+		$data['type'] = $type;
 
 		$categories = $this->modelcategory->getCategories(array('type'=>$type));
 		$data['categories'] = $categories;
@@ -55,12 +56,12 @@ class News extends MX_Controller {
 		if ($cat>0){
 			$category = $this->modelcategory->getCategoryById($cat);
 			$data['cat'] = $category;
-			$list_news = $this->modelnews->getNews(array('category_id'=>$cat),' LIMIT 0,5');
+			$list_news = $this->modelnews->getNews(array('status'=>1,'category_id'=>$cat),' LIMIT 0,5','created DESC');
 			$data['list_news'] = $list_news;
 			$this->template->build('news-list',$data);
 		}else{
 			$data['cat'] = array('type'=>$type,'id'=>0,'name'=>'');
-			$list_news = $this->modelnews->getNews(array('type'=>$type),' LIMIT 0,5');
+			$list_news = $this->modelnews->getNews(array('status'=>1,'type'=>$type),' LIMIT 0,5','created DESC');
 			$data['list_news'] = $list_news;
 			$this->template->build('news',$data);
 		}
@@ -84,6 +85,10 @@ class News extends MX_Controller {
 
 		$dataR = Modules::run('right',$detail_news['type']);
 		$this->template->set_partial('right','right',$dataR);
+
+		$data['type'] = $detail_news['type'];
+		$categories = $this->modelcategory->getCategories(array('type'=>$detail_news['type']));
+		$data['categories'] = $categories;
 
 		$data['other_news'] = $other_news;
 		$data['item'] = $detail_news;
