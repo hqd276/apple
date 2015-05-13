@@ -15,7 +15,9 @@
 		  	<?php foreach ($banners as $key => $value){?>
 		    <div class="item <?php echo ($key==0)?"active":"" ?>" style="background:url(<?php echo base_url("uploads/banner/".$value['image']); ?>) no-repeat">
 		    	<div class="carousel-caption">
-		        	<a href="<?php echo $value['link']; ?>"><?php echo $value['title']; ?></a> 
+		        	<a class="v-link" href="<?php echo $value['link']; ?>"><?php echo $value['title']; ?></a> 
+		        	<br>
+		        	<a class="g-link" href="<?php echo base_url().'/'.$value['id']; ?>">Thư viện ảnh</a>
 		      	</div>
 		    </div>
 		   	<?php } ?>

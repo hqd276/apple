@@ -49,13 +49,12 @@ $route['register'] = "user/register";
 $route['logout'] = "user/logout";
 
 $route['aboutus'] = "about";
-$route['contact'] = "contact";
 
-$route['news'] = "news";
+$route['gallery/(:num)'] = "gallery/index/$1";
+
 $route['news/list/(:num)'] = "news/index/$1";
 $route['news/list/(:num)/(:num)'] = "news/index/$1/$2";
 
-$route['admin'] = "admin";
 // $route['list-support'] = "admin/support";
 // $route['list-booking'] = "admin/booking";
 
