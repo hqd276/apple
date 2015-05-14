@@ -7,6 +7,7 @@
 			<th>Id</th>
 			<th>Title</th>
 			<th>Image</th>
+			<th>Category</th>
 			<th>Status</th>
 			<th>Action</th>
 		</thead>
@@ -21,6 +22,7 @@
 					echo "<img class='img_item' style='height:150px;' src='".base_url("uploads/gallery/".$item['image'])."'/>";
 				}
 				?></td>
+				<td><?php echo $item["category_id"]?></td>
 				<td><?php echo ($item["status"])?"Hiển thị":"Không hiển thị"?></td>
 				<td>
 					<a href="<?php echo base_url("/admin/gallery/edit/".$item["id"]);?>"  class="btn btn-default">Edit</a>

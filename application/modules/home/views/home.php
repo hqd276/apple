@@ -18,7 +18,11 @@
 		    	<div class="carousel-caption">
 		        	<a class="v-link" href="<?php echo $value['link']; ?>"><?php echo $value['title']; ?></a> 
 		        	<br>
+<<<<<<< HEAD
 		        	<a class="g-link" href="<?php echo base_url().'gallery/'.$value['id']; ?>">Thư viện ảnh</a>
+=======
+		        	<a class="g-link" href="<?php echo base_url().'/'.$value['id']; ?>">Thư viện ảnh</a>
+>>>>>>> origin/master
 		      	</div>
 		    </div>
 		   	<?php } ?>

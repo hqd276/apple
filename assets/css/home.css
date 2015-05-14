@@ -16,6 +16,17 @@
 	background-size: cover;
 	padding: 0;
 }
+<<<<<<< HEAD
 .about-home .product .item img{
 	position: relative;
 }
+=======
+
+.carousel-caption a:hover {
+	text-decoration: none;
+	opacity: 0.8
+}
+.carousel-caption .g-link {
+	font-size: 18px;
+}
+>>>>>>> origin/master
