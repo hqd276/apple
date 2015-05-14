@@ -209,12 +209,16 @@
   overflow: hidden;
 }
 .news-list .product .item{
-  height:150px;
+  /*height:200px;*/
   background-size: cover;
+  padding: 0;
+}
+.news-list .product .item img{
+  position: relative;
 }
 @media (min-width: 992px) {
   .news-list .product .item.big{
-    height:500px;
+    /*height:380px;*/
   }
   .news-list {
     padding-top: 0px;

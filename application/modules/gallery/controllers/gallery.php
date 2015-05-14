@@ -20,12 +20,22 @@ class Gallery extends MX_Controller {
 		$this->template->set_partial('footer','footer',$data);
 	}
 	
-	public function index($type = 0,$cat = 0){
+	public function index($cat = 0){
 		$data = array();
+
+		$this->load->model('admin/modelbanner');
+
 		$data['page'] = "gallery";
- 		$list_items = $this->modelgallery->getGallery(array('status'=>1));
+		$where = array('status'=>1);
+		if($cat>0) 
+			$where['category_id'] = $cat;
+ 		$list_items = $this->modelgallery->getGallery($where);
  
  		$data['list_items'] = $list_items;
+
+ 		$category = $this->modelbanner->getBanner(array('id'=>$cat));
+ 		$data['g_title'] = $category[0]['title'];
+
 		$this->template->build('gallery',$data);
 	}
 }

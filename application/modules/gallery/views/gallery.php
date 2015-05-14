@@ -8,7 +8,7 @@
 </style>
 
 <div class=" bg-white">
-	<h2 class="text-uppercase"><?php echo $setting['gallery']['data']->description?></h2>
+	<h2 class="text-uppercase"><?php echo $g_title;?></h2>
 	<hr>
 
 	<div class="row col-md-12">
