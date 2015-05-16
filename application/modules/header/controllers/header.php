@@ -37,9 +37,21 @@ class Header extends MX_Controller{
 
 		$setting = $this->modelsetting->getSetting(null);
 		$setting = add_array_key('key',$setting);
+		$about = array();
+		$contact = array();
+
 		foreach ($setting as $key => $value) {
 			$setting[$key]['data'] = json_decode($value['value']);
+			if ($value['type'] == 1) {
+				if ($value['group'] == 0)
+					$about[] = $setting[$key];
+				else if ($value['group'] == 1)
+					$contact[] = $setting[$key];
+			}
+			
 		}
+		$data['about_list'] = $about;
+		$data['contact_list'] = $contact;
 		$data['setting'] = $setting;
 
 		$this->load->model(array('admin/modelmember'));

@@ -26,17 +26,26 @@ class News extends MX_Controller {
 		$this->template->set_partial('right','right',$dataR);
 
 		$data = array();
+
+		$this->load->model(array('admin/modelsetting'));
+		$this->load->helper(array('util')); 
+
+		$setting = $this->modelsetting->getSetting(null);
+		$setting = add_array_key('key',$setting);
+		foreach ($setting as $key => $value) {
+			$setting[$key]['data'] = json_decode($value['value']);
+		}
 		switch ($type) {
 			case 0:
-				$data['title'] = "Tour";
+				$data['title'] = $setting['tour']['data']->description;
 				$data['page'] = "tour";
 				break;
 			case 1:
-				$data['title'] = "Art";
+				$data['title'] = $setting['art']['data']->description;
 				$data['page'] = "art";
 				break;
 			case 2:
-				$data['title'] = "Edu";
+				$data['title'] = $setting['edu']['data']->description;
 				$data['page'] = "edu";
 				break;
 			// case 3:
@@ -93,6 +102,9 @@ class News extends MX_Controller {
 		$data['other_news'] = $other_news;
 		$data['item'] = $detail_news;
 		$data['cat'] = $category;
+
+		$data['title'] = $detail_news['title'];
+		$data['description'] = $detail_news['description'];
 		$this->template->build('news-detail',$data);
 	}
 }

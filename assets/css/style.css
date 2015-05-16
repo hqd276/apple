@@ -40,21 +40,6 @@ body {
 	min-height: 500px;
 	position: relative;
 }
-#carousel-home>.carousel-inner>.item,#carousel-home>.carousel-inner>.item {
-	
-	/*background-size: cover !important;*/
-}
-#carousel-home>.carousel-inner>.item,#carousel-home>.carousel-inner>.item img {
-	width: 100%;
-}
-.carousel-caption {
-	top:30px;
-	font-size:28px;
-	/*text-align: left;*/
-}
-.carousel-caption a{
-	color: #fff;
-}
 
 .footer {
 	padding: 20px 0 0;

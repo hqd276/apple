@@ -209,11 +209,7 @@
   overflow: hidden;
 }
 .news-list .product .item{
-<<<<<<< HEAD
-  /*height:200px;*/
-=======
   height:200px;
->>>>>>> origin/master
   background-size: cover;
   padding: 0;
 }
@@ -222,11 +218,7 @@
 }
 @media (min-width: 992px) {
   .news-list .product .item.big{
-<<<<<<< HEAD
-    /*height:380px;*/
-=======
     height:380px;
->>>>>>> origin/master
   }
   .news-list {
     padding-top: 0px;

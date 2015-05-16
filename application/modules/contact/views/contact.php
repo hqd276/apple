@@ -2,7 +2,7 @@
 
 <div class="contact-form col-sm-12 bg-white">
 	<div class="col-sm-4">
-		<h2 class="text-uppercase">Contact info</h2>
+		<h2 class="text-uppercase"><?php echo $setting['contact']['data']->description;?></h2>
 		<p>
 			<?php echo $setting['contact']['data']->detail;?>
 		</p>
@@ -15,7 +15,7 @@
 					<?php 
 					if(isset($b_Check))
 						if ($b_Check){
-							echo "Send Success!";
+							echo "Gửi thành công!";
 						}else{
 							echo "Send Fail";
 						}
@@ -32,13 +32,13 @@
 			</div>
 		</div>
 		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Phone</label>
+			<label for="inputEmail3" class="col-sm-2 control-label">Số điện thoại</label>
 			<div class="col-sm-10">
 			  	<input type="" class="form-control" id="inputEmail3" name="phone" placeholder="Phone" value="<?php echo set_value('phone'); ?>">
 			</div>
 		</div>
 		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Content</label>
+			<label for="inputEmail3" class="col-sm-2 control-label">Nội dung</label>
 			<div class="col-sm-10">
 				<textarea class="form-control" name="content" placeholder="Content"><?php echo set_value('content'); ?></textarea>
 			</div>
@@ -46,7 +46,7 @@
 		
 		<div class="form-group">
 			<div class="col-sm-offset-2 col-sm-10">
-			  <button type="submit" class="btn btn-default">Send</button>
+			  <button type="submit" class="btn btn-default">Gửi</button>
 			</div>
 		</div>
 	</form>

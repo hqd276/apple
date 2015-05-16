@@ -1,10 +1,12 @@
 <div class="contact-form col-sm-12 bg-white">
-	<h2 class="text-uppercase">List setting</h2>
+	<h2 class="text-uppercase">List page</h2>
 	
 	<table class="table table-bordered table-hover">
 		<thead>
 			<th>Id</th>
-			<th>Setting</th>
+			<th>Key</th>
+			<th>Name</th>
+			<th>Group Name</th>
 			<th>Action</th>
 		</thead>
 		<tbody>
@@ -13,8 +15,10 @@
 			<tr>
 				<td><?php echo $item["id"]?></td>
 				<td><?php echo $item["key"]?></td>
+				<td><?php echo $item["name"]?></td>
+				<td><?php echo $item["groupname"]?></td>
 				<td>
-					<a href="<?php echo base_url("admin/setting/edit/".$item["id"]);?>" class="btn btn-default"> Edit </a>
+					<a href="<?php echo base_url("admin/page/edit/".$item["id"]);?>" class="btn btn-default"> Edit </a>
 				</td>
 			</tr>
 			<?php }?>

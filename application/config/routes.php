@@ -70,7 +70,7 @@ $route['edit-news/(:num)/(:num)'] = "admin/news/edit/$1/$2";
 // $route['add-gallery'] = "admin/gallery/add";
 
 // $route['setting'] = "admin/setting";
-$route['edit-setting/(:num)'] = "admin/setting/edit/$1";
+// $route['edit-setting/(:num)'] = "admin/setting/edit/$1";
 
 $route['header'] = "header";
 

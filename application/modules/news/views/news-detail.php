@@ -1,6 +1,9 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/news.css">
 <div class="container">
-	<h2 class="text-uppercase"><?php echo $item['title']?></h2>
+	<h2 class="text-uppercase">
+		<?php echo $item['title']?>	<br>
+		<div class="fb-share-button" data-href="<?php echo base_url().'news/detail/'.$item['id'];?>" data-layout="button_count"></div>
+	</h2>
 	<hr>
 	<div class="news-detail">
 		<img class="img-responsive" src="<?php echo base_url().'uploads/news/'.$item['image']?>">

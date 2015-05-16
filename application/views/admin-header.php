@@ -65,6 +65,7 @@
 	          	<ul class="dropdown-menu text-capitalize" role="menu">
 	          		<li><a href="<?php echo base_url();?>admin/support">Supports</a></li>
 	          		<!-- <li><a href="<?php echo base_url();?>admin/booking">Booking</a></li> -->
+	          		<li><a href="<?php echo base_url();?>admin/page">Pages</a></li>
 	          		<li><a href="<?php echo base_url();?>admin/setting">Settings</a></li>
 	          	</ul>
           	</li>
