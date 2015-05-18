@@ -52,6 +52,16 @@ $route['aboutus'] = "about";
 
 $route['gallery/(:num)'] = "gallery/index/$1";
 
+$route['chi-tiet/(:any)'] = "news/detail_t/$1";
+
+$route['du-lich'] = "news/index/0";
+$route['thu-cong'] = "news/index/1";
+$route['giao-duc'] = "news/index/2";
+
+$route['du-lich/(:num)'] = "news/index/0/$1";
+$route['thu-cong/(:num)'] = "news/index/1/$1";
+$route['giao-duc/(:num)'] = "news/index/2/$1";
+
 $route['news/list/(:num)'] = "news/index/$1";
 $route['news/list/(:num)/(:num)'] = "news/index/$1/$2";
 

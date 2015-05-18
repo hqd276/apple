@@ -107,4 +107,33 @@ class News extends MX_Controller {
 		$data['description'] = $detail_news['description'];
 		$this->template->build('news-detail',$data);
 	}
+	public function detail_t($slug='') {
+		if ($slug == '') 
+			redirect(base_url().'news');
+
+		$detail_news = $this->modelnews->getNewsBy($slug,'slug');
+		if (!$detail_news)
+			redirect(base_url().'news');
+
+		$other_news = array();
+		if($detail_news['category_id']>0){
+			$category = $this->modelcategory->getCategoryById($detail_news['category_id']);
+			if ($category)
+				$other_news = $this->modelnews->getNews(array('category_id'=>$category['id']),' LIMIT 0,5');
+			else
+				$category = array("type"=>$detail_news['type'],"id" =>0,"name"=>"");
+		}else{
+			$category = array("type"=>$detail_news['type'],"id" =>0,"name"=>"");
+			$other_news = $this->modelnews->getNews(array('type'=>$detail_news['type']),' LIMIT 0,5');
+		}
+		
+
+		$dataR = Modules::run('right',$detail_news['type']);
+		$this->template->set_partial('right','right',$dataR);
+
+		$data['other_news'] = $other_news;
+		$data['item'] = $detail_news;
+		$data['cat'] = $category;
+		$this->template->build('news-detail',$data);
+	}
 }

@@ -35,7 +35,7 @@
 			<ul class="list-unstyled">
 				<?php if (count($cat_tour)>0){?>
 		      		<?php	foreach ($cat_tour as $key => $value) {
-	      				echo "<li><a href='".base_url()."news/list/0/".$value['id']."'>".$value['name']."</a></li>";
+	      				echo "<li><a href='".base_url()."du-lich/".$value['id']."'>".$value['name']."</a></li>";
 	      			}?>
 		      	<?php }?>
 			</ul>
@@ -45,7 +45,7 @@
 			<ul class="list-unstyled">
 				<?php if (count($cat_art)>0){?>
 		      		<?php	foreach ($cat_art as $key => $value) {
-	      				echo "<li><a href='".base_url()."news/list/1/".$value['id']."'>".$value['name']."</a></li>";
+	      				echo "<li><a href='".base_url()."thu-cong/".$value['id']."'>".$value['name']."</a></li>";
 	      			}?>
 		      	<?php }?>
 			</ul>
@@ -55,7 +55,7 @@
 			<ul class="list-unstyled">
 				<?php if (count($cat_edu)>0){?>
 		      		<?php	foreach ($cat_edu as $key => $value) {
-	      				echo "<li><a href='".base_url()."news/list/2/".$value['id']."'>".$value['name']."</a></li>";
+	      				echo "<li><a href='".base_url()."giao-duc/".$value['id']."'>".$value['name']."</a></li>";
 	      			}?>
 		      	<?php }?>
 			</ul>
@@ -76,7 +76,7 @@
 
 		<ul class="nav navbar-nav pull-right">
 			<li class="dropup">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $setting['about']['data']->description?> <span class="caret"></span></a>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $setting['about-menu']['data']->description?> <span class="caret"></span></a>
 	          <ul class="dropdown-menu" role="menu">
 	          	<?php foreach ($about_list as $key => $value) {?>
 	          		<li><a href="<?php echo base_url().'about/index/'.$value['id'];?>"><?php echo $value['data']->name?></a></li>
@@ -84,16 +84,16 @@
 	            
 	          </ul>
 	        </li>
-	        <li><a href="<?php echo base_url().'news/list/0';?>"><?php echo $setting['tour']['data']->description?></a></li>
-	        <li><a href="<?php echo base_url().'news/list/1';?>"><?php echo $setting['art']['data']->description?></a></li>
-	        <li><a href="<?php echo base_url().'news/list/2';?>"><?php echo $setting['edu']['data']->description?></a></li>
+	        <li><a href="<?php echo base_url().'du-lich';?>"><?php echo $setting['tour']['data']->description?></a></li>
+	        <li><a href="<?php echo base_url().'thu-cong';?>"><?php echo $setting['art']['data']->description?></a></li>
+	        <li><a href="<?php echo base_url().'giao-duc';?>"><?php echo $setting['edu']['data']->description?></a></li>
 	        <li class="dropup">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $setting['contact']['data']->description?> <span class="caret"></span></a>
 	          <ul class="dropdown-menu" role="menu">
 	          	<?php foreach ($contact_list as $key => $value) {?>
 	          		<li><a href="<?php echo base_url().'about/index/'.$value['id'];?>"><?php echo $value['data']->name?></a></li>
 	          	<?php }?>
-	            <li><a href="<?php echo base_url().'contact';?>"><?php echo $setting['contact']['data']->description?></a></li>
+	            <li><a href="<?php echo base_url().'contact';?>"><?php echo $setting['contact-menu']['data']->description?></a></li>
 	          </ul>
 	        </li>
       	</ul>

@@ -5,6 +5,7 @@
 	<table class="table table-bordered table-hover">
 		<thead>
 			<th>Id</th>
+			<th>Image</th>
 			<th>Title</th>
 			<th>Category</th>
 			<th>Status</th>
@@ -15,6 +16,7 @@
 			<?php foreach($list as $item) {?>
 			<tr>
 				<td><?php echo $item["id"]?></td>
+				<td><img style="width:150px;" src="<?php echo base_url().'uploads/news/thumbs/'.$item['image']?>"></td>
 				<td><?php echo $item["title"]?></td>
 				<td><?php echo $item["category_id"]?></td>
 				<td><?php echo $item["status"]?></td>
@@ -30,6 +32,13 @@
 			</tr>
 		<?php }?>
 		</tbody>
+		
 	</table>
+	<nav>
+	  <ul class="pager">
+	    <li class="previous <?php if(!$older_link) echo 'disabled'?>"><a href="<?php echo $older_link?>"><span aria-hidden="true">&larr;</span> Older</a></li>
+	    <li class="next <?php if(!$newer_link) echo 'disabled'?>"><a href="<?php echo $newer_link?>">Newer <span aria-hidden="true">&rarr;</span></a></li>
+	  </ul>
+	</nav>
 </div>
 		

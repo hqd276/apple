@@ -43,7 +43,7 @@
 	<div class="clearfix"></div>
 	<div class="product">
 		<div class="col-md-4 item box">
-			<a href="<?php echo base_url().'news/list/0'?>">
+			<a href="<?php echo base_url().'du-lich'?>">
 				<img src="<?php echo base_url().'uploads/settings/'.$setting['tour']['data']->image;?>">
 				<span class="caption simple-caption">  
 		        <p class="text-uppercase"><?php echo $setting['tour']['data']->name?></p>  
@@ -51,7 +51,7 @@
 	        </a>
 		</div>
 		<div class="col-md-4 item box">
-			<a href="<?php echo base_url().'news/list/1'?>">
+			<a href="<?php echo base_url().'thu-cong'?>">
 				<img id="image-6" src="<?php echo base_url().'uploads/settings/'.$setting['art']['data']->image;?>">
 				<span class="caption scale-caption">  
 		        <p class="text-uppercase"><?php echo $setting['art']['data']->name?></p>  
@@ -59,7 +59,7 @@
 	        </a>
 		</div>
 		<div class="col-md-4 item box">
-			<a href="<?php echo base_url().'news/list/2'?>">
+			<a href="<?php echo base_url().'giao-duc'?>">
 				<img src="<?php echo base_url().'uploads/settings/'.$setting['edu']['data']->image;?>">
 				<span class="caption simple-caption">  
 		        <p class="text-uppercase"><?php echo $setting['edu']['data']->name?></p>  
