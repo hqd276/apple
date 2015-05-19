@@ -126,10 +126,14 @@ class News extends MX_Controller {
 			$category = array("type"=>$detail_news['type'],"id" =>0,"name"=>"");
 			$other_news = $this->modelnews->getNews(array('type'=>$detail_news['type']),' LIMIT 0,5');
 		}
+
+		$data['type'] = $detail_news['type'];
+		$categories = $this->modelcategory->getCategories(array('type'=>$detail_news['type']));
+		$data['categories'] = $categories;
 		
 
-		$dataR = Modules::run('right',$detail_news['type']);
-		$this->template->set_partial('right','right',$dataR);
+		// $dataR = Modules::run('right',$detail_news['type']);
+		// $this->template->set_partial('right','right',$dataR);
 
 		$data['other_news'] = $other_news;
 		$data['item'] = $detail_news;

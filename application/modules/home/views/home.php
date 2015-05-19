@@ -18,11 +18,7 @@
 		    	<div class="carousel-caption">
 		        	<a class="v-link" href="<?php echo $value['link']; ?>"><?php echo $value['title']; ?></a> 
 		        	<br>
-<<<<<<< HEAD
 		        	<a class="g-link" href="<?php echo base_url().'gallery/'.$value['id']; ?>">Thư viện ảnh</a>
-=======
-		        	<a class="g-link" href="<?php echo base_url().'/'.$value['id']; ?>">Thư viện ảnh</a>
->>>>>>> origin/master
 		      	</div>
 		    </div>
 		   	<?php } ?>
@@ -44,7 +40,7 @@
 	<div class="product">
 		<div class="col-md-4 item box">
 			<a href="<?php echo base_url().'du-lich'?>">
-				<img src="<?php echo base_url().'uploads/settings/'.$setting['tour']['data']->image;?>">
+				<img id="image-6" src="<?php echo base_url().'uploads/settings/'.$setting['tour']['data']->image;?>">
 				<span class="caption simple-caption">  
 		        <p class="text-uppercase"><?php echo $setting['tour']['data']->name?></p>  
 		        </span>
@@ -53,14 +49,14 @@
 		<div class="col-md-4 item box">
 			<a href="<?php echo base_url().'thu-cong'?>">
 				<img id="image-6" src="<?php echo base_url().'uploads/settings/'.$setting['art']['data']->image;?>">
-				<span class="caption scale-caption">  
+				<span class="caption simple-caption">  
 		        <p class="text-uppercase"><?php echo $setting['art']['data']->name?></p>  
 		        </span> 
 	        </a>
 		</div>
 		<div class="col-md-4 item box">
 			<a href="<?php echo base_url().'giao-duc'?>">
-				<img src="<?php echo base_url().'uploads/settings/'.$setting['edu']['data']->image;?>">
+				<img id="image-6" src="<?php echo base_url().'uploads/settings/'.$setting['edu']['data']->image;?>">
 				<span class="caption simple-caption">  
 		        <p class="text-uppercase"><?php echo $setting['edu']['data']->name?></p>  
 		        </span> 
