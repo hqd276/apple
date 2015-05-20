@@ -26,6 +26,12 @@
 			</div>
 		</div>
 		<div class="form-group col-sm-12">
+			<label for="inputEmail3" class="col-sm-2 control-label">Url</label>
+			<div class="col-sm-10">
+			  	<?php echo $item['slug']; ?>
+			</div>
+		</div>
+		<div class="form-group col-sm-12">
 			<label for="inputEmail3" class="col-sm-2 control-label">Parent</label>
 			<div class="col-sm-10">
 				<select class='form-control' name='parent'>

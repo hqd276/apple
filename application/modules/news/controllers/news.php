@@ -27,31 +27,16 @@ class News extends MX_Controller {
 
 		$data = array();
 
-		$this->load->model(array('admin/modelsetting'));
-		$this->load->helper(array('util')); 
-
-		$setting = $this->modelsetting->getSetting(null);
-		$setting = add_array_key('key',$setting);
-		foreach ($setting as $key => $value) {
-			$setting[$key]['data'] = json_decode($value['value']);
-		}
 		switch ($type) {
 			case 0:
-				$data['title'] = $setting['tour']['data']->description;
 				$data['page'] = "tour";
 				break;
 			case 1:
-				$data['title'] = $setting['art']['data']->description;
 				$data['page'] = "art";
 				break;
 			case 2:
-				$data['title'] = $setting['edu']['data']->description;
 				$data['page'] = "edu";
-				break;
-			// case 3:
-			// 	$data['title'] = "Blog";
-			// 	$data['page'] = "blog";
-			// 	break;
+				break;ak;
 			
 			default:
 				# code...
@@ -74,9 +59,44 @@ class News extends MX_Controller {
 			$data['list_news'] = $list_news;
 			$this->template->build('news',$data);
 		}
+	}
+	public function index_t($type = 0,$cat = ''){
+		$dataR = Modules::run('right',$type);
+		$this->template->set_partial('right','right',$dataR);
 
-		
-		
+		$data = array();
+
+		switch ($type) {
+			case 0:
+				$data['page'] = "tour";
+				break;
+			case 1:
+				$data['page'] = "art";
+				break;
+			case 2:
+				$data['page'] = "edu";
+				break;
+			default:
+				# code...
+				break;
+		}
+		$data['type'] = $type;
+
+		$categories = $this->modelcategory->getCategories(array('type'=>$type));
+		$data['categories'] = $categories;
+
+		if ($cat!=''){
+			$category = $this->modelcategory->getCategoryBy($cat,'slug');
+			$data['cat'] = $category;
+			$list_news = $this->modelnews->getNews(array('status'=>1,'category_id'=>$category['id']),' LIMIT 0,5','created DESC');
+			$data['list_news'] = $list_news;
+			$this->template->build('news-list',$data);
+		}else{
+			$data['cat'] = array('type'=>$type,'id'=>0,'name'=>'');
+			$list_news = $this->modelnews->getNews(array('status'=>1,'type'=>$type),' LIMIT 0,5','created DESC');
+			$data['list_news'] = $list_news;
+			$this->template->build('news',$data);
+		}
 	}
 	public function detail($id=0) {
 		if ($id<=0) 

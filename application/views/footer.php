@@ -8,23 +8,27 @@
 			<?php switch ($type) {
 				case 0:
 					$strType = 'tour';
+					$link = 'du-lich';
 					break;
 				case 1:
 					$strType = 'art';
+					$link = 'thu-cong';
 					break;
 				case 2:
 					$strType = 'edu';
+					$link = 'giao-duc';
 					break;
 				
 				default:
 					$strType = 'tour';
+					$link = 'du-lich';
 					break;
 			}?>
 			<h4 class="text-uppercase"><?php echo $setting[$strType]['data']->description?></h4>
 			<ul class="list-unstyled">
 				<?php if (count($categories)>0){?>
 		      		<?php	foreach ($categories as $key => $value) {
-	      				echo "<li><a href='".base_url()."news/list/".$value['type']."/".$value['id']."'>".$value['name']."</a></li>";
+	      				echo "<li><a href='".base_url().$link.'/'.$value['slug']."'>".$value['name']."</a></li>";
 	      			}?>
 		      	<?php }?>
 			</ul>
@@ -35,7 +39,7 @@
 			<ul class="list-unstyled">
 				<?php if (count($cat_tour)>0){?>
 		      		<?php	foreach ($cat_tour as $key => $value) {
-	      				echo "<li><a href='".base_url()."du-lich/".$value['id']."'>".$value['name']."</a></li>";
+	      				echo "<li><a href='".base_url()."du-lich/".$value['slug']."'>".$value['name']."</a></li>";
 	      			}?>
 		      	<?php }?>
 			</ul>
@@ -45,7 +49,7 @@
 			<ul class="list-unstyled">
 				<?php if (count($cat_art)>0){?>
 		      		<?php	foreach ($cat_art as $key => $value) {
-	      				echo "<li><a href='".base_url()."thu-cong/".$value['id']."'>".$value['name']."</a></li>";
+	      				echo "<li><a href='".base_url()."thu-cong/".$value['slug']."'>".$value['name']."</a></li>";
 	      			}?>
 		      	<?php }?>
 			</ul>
@@ -55,7 +59,7 @@
 			<ul class="list-unstyled">
 				<?php if (count($cat_edu)>0){?>
 		      		<?php	foreach ($cat_edu as $key => $value) {
-	      				echo "<li><a href='".base_url()."giao-duc/".$value['id']."'>".$value['name']."</a></li>";
+	      				echo "<li><a href='".base_url()."giao-duc/".$value['slug']."'>".$value['name']."</a></li>";
 	      			}?>
 		      	<?php }?>
 			</ul>

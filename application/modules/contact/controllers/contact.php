@@ -20,16 +20,6 @@ class Contact extends MX_Controller {
 	public function index(){
 		$data = array();
 		$data['page'] = 'contact';
-		
-		$this->load->model(array('admin/modelsetting'));
-		$this->load->helper(array('util')); 
-
-		$setting = $this->modelsetting->getSetting(null," LIMIT 0,10");
-		$setting = add_array_key('key',$setting);
-		foreach ($setting as $key => $value) {
-			$setting[$key]['data'] = json_decode($value['value']);
-		}
-		$data['setting'] = $setting;
 
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean|valid_email'); 
 		$this->form_validation->set_rules('content', 'Content', 'required|min_length[5]'); 

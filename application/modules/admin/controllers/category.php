@@ -62,6 +62,7 @@ class Category extends MX_Controller{
 			#Kiểm tra điều kiện validate 
 			if($this->form_validation->run() == TRUE){ 
 				$dataC['name'] = $this->input->post('name'); 
+				$dataC['slug'] = safe_title($this->input->post('name')); 
 				$dataC['parent'] = $this->input->post('parent'); 
 				$dataC['description'] = $this->input->post('description'); 
 				if ($this->input->post('status'))
@@ -116,6 +117,7 @@ class Category extends MX_Controller{
 			#Kiểm tra điều kiện validate 
 			if($this->form_validation->run() == TRUE){ 
 				$dataC['name'] = $this->input->post('name'); 
+				$dataC['slug'] = safe_title($this->input->post('name')); 
 				$dataC['parent'] = $this->input->post('parent'); 
 				$dataC['description'] = $this->input->post('description'); 
 				if ($this->input->post('status'))

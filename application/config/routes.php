@@ -58,12 +58,9 @@ $route['du-lich'] = "news/index/0";
 $route['thu-cong'] = "news/index/1";
 $route['giao-duc'] = "news/index/2";
 
-$route['du-lich/(:num)'] = "news/index/0/$1";
-$route['thu-cong/(:num)'] = "news/index/1/$1";
-$route['giao-duc/(:num)'] = "news/index/2/$1";
-
-$route['news/list/(:num)'] = "news/index/$1";
-$route['news/list/(:num)/(:num)'] = "news/index/$1/$2";
+$route['du-lich/(:any)'] = "news/index_t/0/$1";
+$route['thu-cong/(:any)'] = "news/index_t/1/$1";
+$route['giao-duc/(:any)'] = "news/index_t/2/$1";
 
 // $route['list-support'] = "admin/support";
 // $route['list-booking'] = "admin/booking";

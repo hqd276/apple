@@ -17,7 +17,7 @@
 	<ul class="list-inline">
 		<?php foreach ($categories as $k => $v) {?>
 		<li>
-			<a class="text-center" href="<?php echo base_url().$link.'/'.$v['id']?>">
+			<a class="text-center" href="<?php echo base_url().$link.'/'.$v['slug']?>">
 				<img src="<?php echo base_url().'uploads/categories/'.$v['image'];?>">
 				<p><?php echo $v['name']?></p>
 			</a>
@@ -29,7 +29,7 @@
 	<div class="product">
 		
 		<div class="col-md-12 item box big">
-			<a href="<?php echo base_url().$link.'/'.$categories[0]['id']?>">
+			<a href="<?php echo base_url().$link.'/'.$categories[0]['slug']?>">
 				<img src="<?php echo base_url().'uploads/categories/'.$categories[0]['image'];?>">
 				<span class="caption simple-caption">  
 		        <p class="text-uppercase"><?php echo $categories[0]['name']?></p>  
@@ -38,7 +38,7 @@
 		</div>	
 		
 		<div class="col-md-4 item box">
-			<a href="<?php echo base_url().$link.'/'.$categories[1]['id']?>">
+			<a href="<?php echo base_url().$link.'/'.$categories[1]['slug']?>">
 				<img src="<?php echo base_url().'uploads/categories/thumbs/'.$categories[1]['image'];?>">
 				<span class="caption simple-caption">  
 		        <p class="text-uppercase"><?php echo $categories[1]['name']?></p>  
@@ -46,7 +46,7 @@
 	        </a>
 		</div>
 		<div class="col-md-4 item box">
-			<a href="<?php echo base_url().$link.'/'.$categories[2]['id']?>">
+			<a href="<?php echo base_url().$link.'/'.$categories[2]['slug']?>">
 				<img src="<?php echo base_url().'uploads/categories/thumbs/'.$categories[2]['image'];?>">
 				<span class="caption simple-caption">  
 		        <p class="text-uppercase"><?php echo $categories[2]['name']?></p>  
@@ -54,7 +54,7 @@
 	        </a>
 		</div>
 		<div class="col-md-4 item box">
-			<a href="<?php echo base_url().$link.'/'.$categories[3]['id']?>">
+			<a href="<?php echo base_url().$link.'/'.$categories[3]['slug']?>">
 				<img src="<?php echo base_url().'uploads/categories/thumbs/'.$categories[3]['image'];?>">
 				<span class="caption simple-caption">  
 		        <p class="text-uppercase"><?php echo $categories[3]['name']?></p>  
@@ -62,7 +62,7 @@
 	        </a>
 		</div>
 		<div class="col-md-12 item box big">
-			<a href="<?php echo base_url().$link.'/'.$categories[4]['id']?>">
+			<a href="<?php echo base_url().$link.'/'.$categories[4]['slug']?>">
 				<img src="<?php echo base_url().'uploads/categories/'.$categories[4]['image'];?>">
 				<span class="caption simple-caption">  
 		        <p class="text-uppercase"><?php echo $categories[4]['name']?></p>  
