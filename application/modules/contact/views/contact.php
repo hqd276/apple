@@ -1,14 +1,13 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/contact.css">
 
-<div class="contact-form col-sm-12 bg-white">
-	<div class="col-sm-4">
+<div class="contact-form col-sm-8 col-sm-offset-2 bg-white">
+	<div class="">
 		<h2 class="text-uppercase"><?php echo $setting['contact']['data']->description;?></h2>
 		<p>
 			<?php echo $setting['contact']['data']->detail;?>
 		</p>
 	</div>
-	<form class="form-horizontal  col-sm-8" role="form" method="post" action="<?php echo base_url();?>contact">
-		<h2 class="text-uppercase">Support form</h2>
+	<form class="form-horizontal" role="form" method="post" action="<?php echo base_url();?>contact">
 		<div class="form-group">
 			<div>
 				<span class="success">

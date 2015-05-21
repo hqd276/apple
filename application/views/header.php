@@ -24,11 +24,22 @@
 			        <li><a href="<?php echo base_url().'giao-duc';?>"><?php echo $setting['edu']['data']->description?></a></li>	
 		      	</ul>
 		      	<div class="f-search pull-right">
-		        	<input type="text" class="form-control t-search" name="txtsearch">
+		      	<form action="<?php echo base_url().'search';?>" method="get" id="search-form">
+		      		<input type="text" class="form-control t-search" name="txtsearch">
 		        	<i class="fa fa-search"></i>
+		      	</form>
 		        </div>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$(".t-search").keypress(function(event) {
+    if (event.which == 13) {
+        event.preventDefault();
+        $("#search-form").submit();
+    }
+	});
+</script>

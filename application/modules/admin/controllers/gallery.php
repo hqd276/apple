@@ -30,12 +30,7 @@ class Gallery extends MX_Controller{
 		$gallery = $this->modelgallery->getGallery(null," LIMIT ".$begin.",".($item_per_page+1));
 		if (count($gallery)>0) {
 			foreach ($gallery as $key => $value) {
-				if ($value['category_id']>0){
-					$category = $this->modelcategory->getCategoryById($value['category_id']);
-					$gallery[$key]['category'] = $category['name'];
-				}else {
-					$gallery[$key]['category'] = '';
-				}
+				
 			}
 		}
 

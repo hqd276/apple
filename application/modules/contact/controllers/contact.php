@@ -19,8 +19,7 @@ class Contact extends MX_Controller {
 	
 	public function index(){
 		$data = array();
-		$data['page'] = 'contact';
-
+		
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean|valid_email'); 
 		$this->form_validation->set_rules('content', 'Content', 'required|min_length[5]'); 
 
@@ -37,6 +36,7 @@ class Contact extends MX_Controller {
 			}
 			
 		} 
+		$data['page'] = 'contact';
 
 		$this->template->build('contact',$data);
 	}

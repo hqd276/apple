@@ -10,7 +10,10 @@ class ModelNews extends CI_Model{
 		$strWhere = "";
 		if (is_array($where)) {
 			foreach ($where as $key => $value) {
-				$strWhere .= " AND $key = $value";
+				if (is_numeric($value))
+					$strWhere .= " AND $key = $value";
+				else 
+					$strWhere .= " AND $key like $value";
 			}
 		}
 		$strLimit = "";

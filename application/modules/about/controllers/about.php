@@ -24,6 +24,12 @@ class About extends MX_Controller{
 			case '8':
 				$key = 'about2';
 				break;
+			case '9':
+				$key = 'contact1';
+				break;
+			case '10':
+				$key = 'contact2';
+				break;
 			
 			default:
 				$key = 'about';
