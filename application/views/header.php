@@ -12,7 +12,11 @@
 		      </button>
 		      <a class="navbar-brand" href="/">
 		      	<!-- <i class="fa fa-apple"></i> -->
-		      	iinvn
+		      	<?php if($setting['logo']['data']->image != '') {?>
+		      		<img class="logo" src="<?php echo base_url().'uploads/settings/'.$setting['logo']['data']->image?>">
+		      	<?php }else{?>
+		      		iinvn
+		      	<?php }?>
 		      </a>
 		    </div>
 

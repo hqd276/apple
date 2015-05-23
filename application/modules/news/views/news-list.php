@@ -3,7 +3,7 @@
 	<span class="title text-uppercase"><?php echo $cat['name']?></span>
 	<hr>
 
-	<div class="news-form container">
+	<div class="news-form  col-sm-8 col-sm-offset-2">
 		<?php foreach ($list_news as $key => $value) {?>
 			<div class="item text-left">
 				<div class="col-md-4">
@@ -12,7 +12,7 @@
 				<div class="col-md-8">
 					<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>"><h4 class="text-uppercase"><?php echo $value['title']?></h4></a>
 					<p><?php echo split_char($value['description'],150,1)." ..."?></p>
-					<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>" class="text-uppercase more pull-right">More</a>
+					<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>" class="text-uppercase more pull-right">Xem tiếp</a>
 				</div>
 				
 			</div>

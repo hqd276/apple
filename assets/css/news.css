@@ -192,9 +192,9 @@
   *border-left-color: #ffffff;
 }
 
-.news-list {
+/*.news-list {
   padding-top: 180px;
-}
+}*/
 .news-list .title{
   font-weight: bold;
   font-size: 28px;
@@ -224,6 +224,11 @@
     padding-top: 0px;
   }
 }
+/*@media (max-width: 768px) {
+  .news-list {
+    padding-top: 0;
+  }
+}*/
 
 .news-list .news-form .item{
   padding: 20px;
