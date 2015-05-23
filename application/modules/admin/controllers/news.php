@@ -84,6 +84,7 @@ class News extends MX_Controller{
 		// $category = add_array_key("id",$category);
 
 		$dataC = array('title' =>'',
+						'slug' =>'',
 						'description' =>'',
 						'detail' =>'',
 						'info' =>'',
@@ -102,7 +103,7 @@ class News extends MX_Controller{
 
 			$this->form_validation->set_rules('title', 'Title', 'required|min_length[5]|is_unique[news.title]'); 
 			$this->form_validation->set_rules('detail', 'Detail', 'required|min_length[5]'); 
-
+			// var_dump($this->form_validation->run());die;
 			#Kiểm tra điều kiện validate 
 			if($this->form_validation->run() == TRUE){ 
 				$dataC['title'] = $this->input->post('title'); 
@@ -147,6 +148,8 @@ class News extends MX_Controller{
 					$data['b_Check']= false;
 				}
 			} 
+		}else{
+			$data['b_Check']= false;
 		}
 
 		$data['category_box'] = $this->category_box($category, $dataC);

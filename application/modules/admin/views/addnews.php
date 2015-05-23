@@ -38,7 +38,8 @@ tinymce.init({
 						}
 					?>
 				</span>
-				<?php if(form_error('name')!='') echo '<label class="control-label alert alert-warning" for="inputError1">'.form_error('name').'</label>'; ?>
+				<?php if(form_error('title')!='') echo '<label class="control-label alert alert-warning" for="inputError1">'.form_error('title').'</label>'; ?>
+				<?php if(form_error('detail')!='') echo '<label class="control-label alert alert-warning" for="inputError1">'.form_error('detail').'</label>'; ?>
 				<?php if(isset($upload_mess)) echo '<label class="control-label alert alert-warning" for="inputError1">'.$upload_mess.'</label>'; ?>
 			</div>
 		</div>
