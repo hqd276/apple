@@ -74,10 +74,10 @@
 	<div class="news-form col-sm-8 col-sm-offset-2">
 		<?php foreach ($list_news as $key => $value) {?>
 			<div class="item col-sm-6">
-				<div class="col-md-4">
+				<div class="img-news">
 					<img class="img-responsive" src="<?php echo base_url().'uploads/news/'.$value['image']?>">
 				</div>
-				<div class="col-md-8">
+				<div class="detail-news">
 					<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>"><h4 class="text-uppercase"><?php echo $value['title']?></h4></a>
 					<p><?php echo split_char($value['description'],150,1)." ..."?></p>
 

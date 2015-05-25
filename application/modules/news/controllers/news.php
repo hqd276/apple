@@ -88,12 +88,12 @@ class News extends MX_Controller {
 		if ($cat!=''){
 			$category = $this->modelcategory->getCategoryBy($cat,'slug');
 			$data['cat'] = $category;
-			$list_news = $this->modelnews->getNews(array('status'=>1,'category_id'=>$category['id']),' LIMIT 0,5','created DESC');
+			$list_news = $this->modelnews->getNews(array('status'=>1,'category_id'=>$category['id']),' LIMIT 0,5','`order`');
 			$data['list_news'] = $list_news;
 			$this->template->build('news-list',$data);
 		}else{
 			$data['cat'] = array('type'=>$type,'id'=>0,'name'=>'');
-			$list_news = $this->modelnews->getNews(array('status'=>1,'type'=>$type),' LIMIT 0,5','created DESC');
+			$list_news = $this->modelnews->getNews(array('status'=>1,'type'=>$type),' LIMIT 0,5','`order`');
 			$data['list_news'] = $list_news;
 			$this->template->build('news',$data);
 		}
