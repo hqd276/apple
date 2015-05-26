@@ -8,6 +8,7 @@
 			<th>Image</th>
 			<th>Title</th>
 			<th>Category</th>
+			<th>Order</th>
 			<th>Status</th>
 			<th>Action</th>
 		</thead>
@@ -18,7 +19,8 @@
 				<td><?php echo $item["id"]?></td>
 				<td><img style="width:150px;" src="<?php echo base_url().'uploads/news/thumbs/'.$item['image']?>"></td>
 				<td><?php echo $item["title"]?></td>
-				<td><?php echo $item["category_id"]?></td>
+				<td><?php echo $item["category"]?></td>
+				<td><?php echo $item["order"]?></td>
 				<td><?php echo $item["status"]?></td>
 				<td>
 					<a href="#" onclick="confirmClick('<?php echo base_url('/admin/news/delete/'.$type.'/'.$item["id"])?>')"  class="btn btn-default"> Delete </a>

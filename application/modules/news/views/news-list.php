@@ -12,7 +12,6 @@
 				<div class="detail-news">
 					<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>"><h4 class="text-uppercase"><?php echo $value['title']?></h4></a>
 					<p><?php echo split_char($value['description'],150,1)." ..."?></p>
-					<a href="<?php echo base_url().'chi-tiet/'.$value['slug']?>" class="text-uppercase more pull-right">Xem tiếp</a>
 				</div>
 				
 			</div>

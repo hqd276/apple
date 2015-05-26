@@ -14,7 +14,7 @@
 .about-home .product .item{
 	/*height:200px;*/
 	background-size: cover;
-	padding: 0;
+	padding: 1px;
 }
 .about-home .product .item img{
 	position: relative;
