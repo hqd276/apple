@@ -83,11 +83,11 @@
 }
 
 .news-detail .img-responsive {
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
-.news-detail .tab-content img {
-  max-width: 100%;
+.news-detail .tab-pane img {
+  width: 100%;
   height: auto;
 }
 

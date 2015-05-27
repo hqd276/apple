@@ -13,7 +13,7 @@
 		$link = 'du-lich';
 		break;
 }?>
-<div class="news-categories">
+<div class="news-categories ">
 	<ul class="list-inline">
 		<?php foreach ($categories as $k => $v) {?>
 		<li>
@@ -25,7 +25,7 @@
 		<?php }?>
 	</ul>
 </div>
-<div class="news-list ">
+<div class="news-list container">
 	<div class="product">
 		
 		<div class="col-md-12 item box big">

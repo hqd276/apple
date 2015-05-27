@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/home.css">
 
-<div class="about-home ">
+<div class="about-home container ">
 	<div class="">
 		<div id="carousel-home" class="carousel slide" data-ride="carousel">
 		  <!-- Indicators -->
@@ -16,9 +16,9 @@
 		  	<div class="item <?php echo ($key==0)?"active":"" ?>" >
 		    	<img src="<?php echo base_url("uploads/banner/".$value['image']); ?>">
 		    	<div class="carousel-caption">
-		        	<a class="v-link" href="<?php echo $value['link']; ?>"><?php echo $value['title']; ?></a> 
+		        	<a class="v-link" target="_blank" href="<?php echo $value['link']; ?>"><?php echo $value['title']; ?></a> 
 		        	<br>
-		        	<a class="g-link" href="<?php echo base_url().'gallery/'.$value['id']; ?>">Thư viện ảnh</a>
+		        	<a class="g-link" target="_blank" href="<?php echo base_url().'gallery/'.$value['id']; ?>">Thư viện ảnh</a>
 		      	</div>
 		    </div>
 		   	<?php } ?>
