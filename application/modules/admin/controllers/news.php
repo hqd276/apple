@@ -10,6 +10,7 @@ class News extends MX_Controller{
 		if ($user['id']){
 			#Tải model 
 			$this->load->model(array('modelnews'));
+			$this->load->model(array('modelcategory'));
 
 			$this->template->set('user',$user);
 		}else{
@@ -30,7 +31,8 @@ class News extends MX_Controller{
 		$news = $this->modelnews->getNews(array("type"=>$type)," LIMIT ".$begin.",".($item_per_page+1),"created DESC");
 		if (count($news)>0) {
 			foreach ($news as $key => $value) {
-				# code...
+				$category = $this->modelcategory->getCategoryById($value['category_id']);
+				$news[$key]['category'] = $category['name'] ;
 			}
 		}
 		$newer_link = '';

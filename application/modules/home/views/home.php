@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/home.css">
 
-<div class="about-home container ">
+<div class="about-home container">
 	<div class="">
 		<div id="carousel-home" class="carousel slide" data-ride="carousel">
 		  <!-- Indicators -->
