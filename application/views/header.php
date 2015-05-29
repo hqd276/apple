@@ -25,7 +25,25 @@
 		      	<ul class="nav navbar-nav">
 			        <li><a href="<?php echo base_url().'du-lich';?>"><?php echo $setting['tour']['data']->description?></a></li>
 			        <li><a href="<?php echo base_url().'thu-cong';?>"><?php echo $setting['art']['data']->description?></a></li>
-			        <li><a href="<?php echo base_url().'giao-duc';?>"><?php echo $setting['edu']['data']->description?></a></li>	
+			        <li><a href="<?php echo base_url().'giao-duc';?>"><?php echo $setting['edu']['data']->description?></a></li>
+			        <li class="dropdown visible-xs">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $setting['about-menu']['data']->description?> <span class="caret"></span></a>
+			          <ul class="dropdown-menu" role="menu">
+			          	<?php foreach ($about_list as $key => $value) {?>
+			          		<li><a href="<?php echo base_url().$value['data']->slug;?>"><?php echo $value['data']->name?></a></li>
+			          	<?php }?>
+			            
+			          </ul>
+			        </li>
+			        <li class="dropdown visible-xs">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $setting['contact']['data']->description?> <span class="caret"></span></a>
+			          <ul class="dropdown-menu" role="menu">
+			          	<?php foreach ($contact_list as $key => $value) {?>
+			          		<li><a href="<?php echo base_url().$value['data']->slug;?>"><?php echo $value['data']->name?></a></li>
+			          	<?php }?>
+			            <li><a href="<?php echo base_url().'contact';?>"><?php echo $setting['contact-menu']['data']->description?></a></li>
+			          </ul>
+			        </li>
 		      	</ul>
 		      	<div class="f-search pull-right">
 		      	<form action="<?php echo base_url().'search';?>" method="get" id="search-form">

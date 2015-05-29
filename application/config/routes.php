@@ -62,6 +62,14 @@ $route['du-lich/(:any)'] = "news/index_t/0/$1";
 $route['thu-cong/(:any)'] = "news/index_t/1/$1";
 $route['giao-duc/(:any)'] = "news/index_t/2/$1";
 
+$route['gioi-thieu-chung'] = "about/index/4";
+$route['cac-thuong-hieu'] = "about/index/7";
+$route['du-an-moi'] = "about/index/8";
+
+$route['iin-art-vietnam'] = "about/index/9";
+$route['iin-edu-vietnam'] = "about/index/10";
+$route['iin-tour-vietnam'] = "contact";
+
 // $route['list-support'] = "admin/support";
 // $route['list-booking'] = "admin/booking";
 

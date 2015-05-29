@@ -37,7 +37,7 @@
 	        </a>
 		</div>	
 		
-		<div class="col-md-4 item box">
+		<div class="col-xs-4 item box">
 			<a href="<?php echo base_url().$link.'/'.$categories[1]['slug']?>">
 				<img src="<?php echo base_url().'uploads/categories/thumbs/'.$categories[1]['image'];?>">
 				<span class="caption simple-caption">  
@@ -45,7 +45,7 @@
 		        </span>
 	        </a>
 		</div>
-		<div class="col-md-4 item box">
+		<div class="col-xs-4 item box">
 			<a href="<?php echo base_url().$link.'/'.$categories[2]['slug']?>">
 				<img src="<?php echo base_url().'uploads/categories/thumbs/'.$categories[2]['image'];?>">
 				<span class="caption simple-caption">  
@@ -53,7 +53,7 @@
 		        </span>
 	        </a>
 		</div>
-		<div class="col-md-4 item box">
+		<div class="col-xs-4 item box">
 			<a href="<?php echo base_url().$link.'/'.$categories[3]['slug']?>">
 				<img src="<?php echo base_url().'uploads/categories/thumbs/'.$categories[3]['image'];?>">
 				<span class="caption simple-caption">  

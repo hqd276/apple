@@ -36,6 +36,17 @@
 	width: 100%;
 	height: 550px;
 }
+@media (max-width:768px) {
+	#carousel-home>.carousel-inner>.item,#carousel-home>.carousel-inner>.item img {
+		width: 100%;
+		height: 250px;
+	}
+
+	.about-home .product .item img {
+		height: 100px;
+	}
+
+}
 .carousel-caption {
 	top:30px;
 	font-size:28px;

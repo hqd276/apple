@@ -78,12 +78,12 @@
 	<div class="container">
 		<h5 class="pull-left">&copy; - Copyright by HD</h5>
 
-		<ul class="nav navbar-nav pull-right">
+		<ul class="nav navbar-nav pull-right hidden-xs">
 			<li class="dropup">
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $setting['about-menu']['data']->description?> <span class="caret"></span></a>
 	          <ul class="dropdown-menu" role="menu">
 	          	<?php foreach ($about_list as $key => $value) {?>
-	          		<li><a href="<?php echo base_url().'about/index/'.$value['id'];?>"><?php echo $value['data']->name?></a></li>
+	          		<li><a href="<?php echo base_url().$value['data']->slug;?>"><?php echo $value['data']->name?></a></li>
 	          	<?php }?>
 	            
 	          </ul>
@@ -95,7 +95,7 @@
 	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $setting['contact']['data']->description?> <span class="caret"></span></a>
 	          <ul class="dropdown-menu" role="menu">
 	          	<?php foreach ($contact_list as $key => $value) {?>
-	          		<li><a href="<?php echo base_url().'about/index/'.$value['id'];?>"><?php echo $value['data']->name?></a></li>
+	          		<li><a href="<?php echo base_url().$value['data']->slug;?>"><?php echo $value['data']->name?></a></li>
 	          	<?php }?>
 	            <li><a href="<?php echo base_url().'contact';?>"><?php echo $setting['contact-menu']['data']->description?></a></li>
 	          </ul>

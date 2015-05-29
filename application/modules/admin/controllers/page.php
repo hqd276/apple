@@ -56,11 +56,13 @@ class Page extends MX_Controller{
 			$dataC['image'] = $item->image;
 			$dataC['description'] = $item->description;
 			$dataC['detail'] = $item->detail;
+			$dataC['slug'] = $item->slug;
 		}else{
 			$dataC['name'] = '';
 			$dataC['image'] = '';
 			$dataC['description'] = '';
 			$dataC['detail'] = '';
+			$dataC['slug'] = '';
 		}
 		
 		if ($this->input->post('submit') == "ok") {
@@ -74,6 +76,7 @@ class Page extends MX_Controller{
 				$value['name'] = $this->input->post('name'); 
 				$value['description'] = $this->input->post('description'); 
 				$value['detail'] = $this->input->post('detail'); 
+				$value['slug'] = $dataC['slug'];
 
 				$value['image'] = $dataC['image'];
 				if (!empty ($_FILES['image'])) {

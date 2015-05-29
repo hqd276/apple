@@ -231,17 +231,24 @@
 .news-list .product .item img{
   position: relative;
 }
+.news-list .product .item.big{
+  height:550px;
+}
 @media (min-width: 992px) {
-  .news-list .product .item.big{
-    height:550px;
-  }
+  
   .news-list {
     padding-top: 0px;
   }
 }
-/*@media (max-width: 768px) {
-  .news-list {
-    padding-top: 0;
+@media (max-width: 768px) {
+  .news-categories img {
+    height: 50px;
   }
-}*/
+  .news-list .product .item{
+    height:100px;
+  }
+  .news-list .product .item.big{
+    height:250px;
+  }
+}
 
