@@ -38,7 +38,7 @@
 	</div>
 	<div class="clearfix"></div>
 	<div class="product">
-		<div class="col-xs-4 item box">
+		<div class="col-sm-4 item box">
 			<a href="<?php echo base_url().'du-lich'?>">
 				<img id="image-6" src="<?php echo base_url().'uploads/settings/'.$setting['tour']['data']->image;?>">
 				<span class="caption simple-caption">  
@@ -46,7 +46,7 @@
 		        </span>
 	        </a>
 		</div>
-		<div class="col-xs-4 item box">
+		<div class="col-sm-4 item box">
 			<a href="<?php echo base_url().'thu-cong'?>">
 				<img id="image-6" src="<?php echo base_url().'uploads/settings/'.$setting['art']['data']->image;?>">
 				<span class="caption simple-caption">  
@@ -54,7 +54,7 @@
 		        </span> 
 	        </a>
 		</div>
-		<div class="col-xs-4 item box">
+		<div class="col-sm-4 item box">
 			<a href="<?php echo base_url().'giao-duc'?>">
 				<img id="image-6" src="<?php echo base_url().'uploads/settings/'.$setting['edu']['data']->image;?>">
 				<span class="caption simple-caption">  
