@@ -11,11 +11,11 @@
 	<h2 class="text-uppercase"><?php echo $g_title;?></h2>
 	<hr>
 
-	<div class="row col-md-12">
+	<div class="row col-md-12 wrapper-parent">
 		<?php foreach ($list_items as $key => $value) {?>
 			<div class="col-xs-6 col-md-3">
 			    <div class="thumbnail">
-			    	<a href="<?php echo base_url("uploads/gallery/".$value['image']); ?>" data-toggle="lightbox" data-gallery="multiimages" data-title="<?php echo $value['title'] ?>">
+			    	<a href="<?php echo base_url("uploads/gallery/".$value['image']); ?>" data-toggle="lightbox" data-gallery="multiimages" data-title="<?php echo $value['title'] ?>" data-parent=".wrapper-parent">
                         <img src="<?php echo base_url("uploads/gallery/thumbs/".$value['image']); ?>" class="img-responsive">
                     </a>
 			      	<!-- <div class="caption text-center">
@@ -32,33 +32,17 @@
 <script src="<?php echo base_url();?>assets/css/ekko-lightbox/ekko-lightbox.js"></script>
 
 <script type="text/javascript">
+    
     $(document).ready(function ($) {
+
         // delegate calls to data-toggle="lightbox"
         $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
             event.preventDefault();
             return $(this).ekkoLightbox({
-                onShown: function() {
-                    if (window.console) {
-                        return console.log('Checking our the events huh?');
-                    }
-                },
-				onNavigate: function(direction, itemIndex) {
-                    if (window.console) {
-                        return console.log('Navigating '+direction+'. Current item: '+itemIndex);
-                    }
-				}
+                always_show_close: true
             });
         });
 
-        //Programatically call
-        $('#open-image').click(function (e) {
-            e.preventDefault();
-            $(this).ekkoLightbox();
-        });
-        $('#open-youtube').click(function (e) {
-            e.preventDefault();
-            $(this).ekkoLightbox();
-        });
-
     });
+        
 </script>
